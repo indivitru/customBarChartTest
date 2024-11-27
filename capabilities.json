@@ -1,0 +1,77 @@
+{
+  "dataRoles": [
+    {
+      "name": "category",
+      "kind": "Grouping",
+      "displayName": "Eixo Categoria"
+    },
+    {
+      "name": "series",
+      "kind": "Grouping",
+      "displayName": "Séries de Datas"
+    },
+    {
+      "name": "measure",
+      "kind": "Measure",
+      "displayName": "Valores"
+    },
+    {
+      "name": "variation",
+      "kind": "Measure",
+      "displayName": "Variação (%)"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "categorical": {
+        "categories": {
+          "bind": { "to": "category" },
+          "dataReductionAlgorithm": { "top": {} }
+        },
+        "values": {
+          "group": {
+            "by": "series",
+            "select": [
+              { "bind": { "to": "measure" } },
+              { "bind": { "to": "variation" } }
+            ],
+            "dataReductionAlgorithm": { "top": {} }
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "general": {
+      "displayName": "Configurações Gerais",
+      "properties": {
+        "showVariations": {
+          "type": { "bool": true },
+          "displayName": "Exibir Variações (%)",
+          "description": "Ative para exibir variações percentuais no gráfico."
+        },
+        "threshold": {
+          "type": { "numeric": true },
+          "displayName": "Limite de Variação (%)",
+          "description": "Defina um limite percentual para as variações exibidas."
+        }
+      }
+    },
+    "axis": {
+      "displayName": "Configurações dos Eixos",
+      "properties": {
+        "xAxisTitle": {
+          "type": { "text": true },
+          "displayName": "Título do Eixo X",
+          "description": "Texto exibido como título do eixo X."
+        },
+        "yAxisTitle": {
+          "type": { "text": true },
+          "displayName": "Título do Eixo Y",
+          "description": "Texto exibido como título do eixo Y."
+        }
+      }
+    }
+  },
+  "privileges": []
+}

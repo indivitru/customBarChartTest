@@ -1,0 +1,24 @@
+{
+    "visual": {
+      "name": "customBarChart",
+      "displayName": "Custom Bar Chart",
+      "guid": "customBarChart1234",
+      "visualClassName": "Visual",
+      "version": "1.0.0",
+      "description": "Um gráfico de barras personalizado criado com Power BI Visual Tools.",
+      "supportUrl": "https://seu-suporte-url.com",
+      "gitHubUrl": "https://github.com/seu-repositorio/customBarChart"
+    },
+    "author": {
+      "name": "Indianara Squersato",
+      "email": "planejamento.mercado@vitru.com.br"
+    },
+    "assets": {
+      "icon": "assets/icon.png",
+      "screenshots": []
+    },
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": []
+  }
+  
